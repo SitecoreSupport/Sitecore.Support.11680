@@ -64,7 +64,9 @@
               }
               else
               {
-                nameValueCollection[item.Name] = field.Value;
+                #region Changed code
+                nameValueCollection[item.Name] = Uri.EscapeDataString(field.Value);
+                #endregion
               }
             }
             renderingByUniqueId.Parameters = new UrlString(nameValueCollection).GetUrl();
