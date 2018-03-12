@@ -42,7 +42,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions">
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=1.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
       <HintPath>..\packages\SC.Microsoft.Extensions.DependencyInjection.Abstractions.9.0.1\lib\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
       <Private>False</Private>
     </Reference>
@@ -50,8 +50,12 @@
       <HintPath>..\packages\SC.Sitecore.ExperienceEditor.9.0.1\lib\Sitecore.ExperienceEditor.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Sitecore.Kernel">
+    <Reference Include="Sitecore.Kernel, Version=11.1.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\SC.Sitecore.Kernel.9.0.1\lib\Sitecore.Kernel.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sitecore.XA.Feature.Composites, Version=3.6.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SXA90.Sitecore.XA.Feature.Composites.1.6.0\lib\Sitecore.XA.Feature.Composites.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Sitecore.XA.Foundation.Common, Version=3.6.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -60,6 +64,10 @@
     </Reference>
     <Reference Include="Sitecore.XA.Foundation.Grid, Version=3.6.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\SXA90.Sitecore.XA.Foundation.Grid.1.6.0\lib\Sitecore.XA.Foundation.Grid.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sitecore.XA.Foundation.Presentation, Version=3.6.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SXA90.Sitecore.XA.Foundation.Presentation.1.6.0\lib\Sitecore.XA.Foundation.Presentation.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Sitecore.XA.Foundation.SitecoreExtensions, Version=3.6.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -82,6 +90,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="XA\Feature\Composites\Pipelines\GetFrontEndLayoutDefinition\InjectCompositeComponents.cs" />
     <Compile Include="XA\Foundation\Grid\Commands\ShowGridPropertiesDialog.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -91,6 +100,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="Properties\PublishProfiles\sc90u1BackIm.pubxml" />
     <None Include="web.config" />
   </ItemGroup>
   <PropertyGroup>
