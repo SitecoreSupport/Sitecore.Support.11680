@@ -41,7 +41,18 @@
             {
               list.RemoveAll((RenderingModel model) => duplicatedUniqueIDs.Any((ID id) => id == model.UniqueId));
               Log.Warn(string.Format("SXA: On page editing of composites functionality has filtered some renderings due to duplicates in layout definition. ({0})", string.Join(",", duplicatedUniqueIDs)), this);
-            } 
+            }
+            #region Added code
+            for (int i = 0; i < list.Count; i++)
+            {
+              NameValueCollection escapedParameters = new NameValueCollection();
+              for (int j = 0; j < list[i].Parameters.Count; j++)
+              {
+                escapedParameters.Add(list[i].Parameters.AllKeys[j], System.Uri.EscapeDataString(list[i].Parameters[j]));
+              }
+              list[i].Parameters = escapedParameters;
+            }
+            #endregion Added code   
             list = this.RemoveRedundantRenderingsAttributes(list);
             currentDevice.Renderings.RenderingsCollection.AddRange(list);
           }
