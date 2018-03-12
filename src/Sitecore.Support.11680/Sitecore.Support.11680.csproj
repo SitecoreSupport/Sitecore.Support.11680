@@ -46,7 +46,7 @@
       <HintPath>..\packages\SC.Microsoft.Extensions.DependencyInjection.Abstractions.9.0.1\lib\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Sitecore.ExperienceEditor">
+    <Reference Include="Sitecore.ExperienceEditor, Version=4.1.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\SC.Sitecore.ExperienceEditor.9.0.1\lib\Sitecore.ExperienceEditor.dll</HintPath>
       <Private>False</Private>
     </Reference>
